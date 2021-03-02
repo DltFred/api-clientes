@@ -9,7 +9,7 @@ const PARAMS = {
   database: process.env.DB_DATABASE
 }
 
-const db = mysql.createConnection(PARAMS)
+const db = mysql.createPool(PARAMS)
 
 db.connect(error => {
   if (error) throw error
